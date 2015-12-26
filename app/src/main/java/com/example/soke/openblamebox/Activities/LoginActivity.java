@@ -38,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
                 LoginActivity.this.onFacebookAccessTokenChange(currentAccessToken);
             }
         };
+        // yolo
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
