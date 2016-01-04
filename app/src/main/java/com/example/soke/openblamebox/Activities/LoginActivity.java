@@ -12,6 +12,7 @@ import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.firebase.client.Firebase;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
-
+        Firebase.setAndroidContext(getApplicationContext());
 
         faceBookLoginActions();
         setContentView(R.layout.activity_login);
