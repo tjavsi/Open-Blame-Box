@@ -26,9 +26,9 @@ public class LoginActivity extends AppCompatActivity {
 
 
         faceBookLoginActions();
-
         setContentView(R.layout.activity_login);
     }
+
     public void faceBookLoginActions() {
         callbackManager = CallbackManager.Factory.create();
         loginButton = (LoginButton) findViewById(R.id.login_button);
@@ -38,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
                 LoginActivity.this.onFacebookAccessTokenChange(currentAccessToken);
             }
         };
-        // yolo
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
